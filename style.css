@@ -641,3 +641,190 @@ section {
   margin-top: 5px;
 }
 
+
+
+
+
+/* ======================= PROJECTS SECTION / DYNAMIC CAROUSEL (nach Vorbild) ======================= */
+#projects {
+  padding: 100px 20px;
+  background-color: #222222;
+}
+
+/* Du hast diese Klasse wahrscheinlich schon, falls nicht, füge sie hinzu */
+.projects-container {
+  margin: 0 auto;
+}
+
+/* NEU: Stellt sicher, dass der Container die volle Breite nutzt */
+.wide-container {
+    width: 100%;
+    max-width: 1200px; /* Behält eine vernünftige Maximalbreite bei */
+}
+
+#projects .section-title {
+  color: #ffffff;
+}
+
+.projects-section {
+  min-height: 80vh;
+  margin-top: 40px;
+  display: flex;
+  width: 100%; /* NEU: Erlaubt dem Container, die volle Breite einzunehmen */
+}
+
+.project-data-wrapper {
+  perspective-origin: 50% 50%;
+  perspective: 100em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  min-height: 500px;
+  flex-grow: 1;
+}
+
+.project-data {
+  position: absolute;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  cursor: pointer;
+  transform: translateZ(calc(var(--distance) * -1));
+  transform-style: preserve-3d;
+}
+
+.arrow-left, .arrow-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  cursor: pointer;
+  color: #3498DB; /* Deine Akzentfarbe */
+  z-index: 10;
+  padding: 10px;
+}
+
+.arrow-left { left: 0px; }
+.arrow-right { right: 0px; }
+
+.navigation {
+  position: absolute;
+  bottom: 1rem;
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.navigation .nav-dot {
+  padding: 5px;
+  background: #fff;
+  border: 1px solid #22222275;
+  box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  transition: all 0.4s ease;
+}
+
+.navigation .focused {
+  background: #3498DB; /* Deine Akzentfarbe */
+  transform: scale(1.4);
+}
+
+.project-card {
+  padding: 1.5rem;
+  width: min(450px, calc(100vw - 70px));
+  max-width: 450px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border-radius: 1em;
+  position: absolute;
+  transform: translateX(-50%) rotateY(var(--rotation)) translateZ(var(--distance));
+  transition: filter 1s ease, box-shadow 0.2s ease;
+  backface-visibility: hidden;
+  pointer-events: none;
+  filter: grayscale(80%) blur(4px);
+  color: #333;
+}
+
+.project-card.focused {
+  filter: grayscale(0%) blur(0px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  pointer-events: auto;
+}
+
+.projects-header {
+  overflow: hidden;
+  border-radius: 0.5rem;
+  margin: -1.5rem -1.5rem 1.5rem -1.5rem;
+}
+.card-img-top {
+    height: 220px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.card-title {
+    font-weight: 700;
+}
+
+.technologies {
+  margin-top: 1em;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.technologies .stack-badge {
+  background-color: #e0e0e0;
+  color: #333;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.8rem;
+  border-radius: 5px;
+}
+
+.card-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: auto; /* Schiebt die Buttons nach unten */
+}
+.card-buttons .btn {
+  font-weight: 600;
+  border-radius: 5px;
+}
+.card-buttons .btn i {
+  margin-right: 8px;
+}
+.card-buttons .btn-primary {
+  background-color: #3498DB;
+  border-color: #3498DB;
+}
+.card-buttons .btn-secondary {
+  background-color: #555;
+  border-color: #555;
+  color: #fff;
+}
+.card-buttons .btn-secondary:hover {
+  background-color: #333;
+  border-color: #333;
+}
+
+.content {
+  max-height: 100px; /* Höhe der Beschreibung */
+  overflow-y: auto;
+  padding-right: 10px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.content::-webkit-scrollbar {
+  width: 5px;
+  background: #e0e0e0;
+}
+.content::-webkit-scrollbar-thumb {
+  background: #3498DB;
+  border-radius: 5px;
+}
