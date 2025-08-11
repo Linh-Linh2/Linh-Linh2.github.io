@@ -37,18 +37,9 @@ $(document).ready(function () {
 
 
 
-
-
-
-
-
-
-
-
 // ======================= DYNAMIC PROJECT CAROUSEL (nach Vorbild) =======================
 document.addEventListener("DOMContentLoaded", function() {
 
-    // --- 1. DEINE PROJEKTDATEN (Hier 6 Projekte eintragen) ---
     const projectDataSource = [
       {
         title: "Titel meines ersten Projekts",
@@ -100,14 +91,13 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     ];
 
-    // --- 2. DER CODE, DER ALLES STEUERT (muss nicht geändert werden) ---
     const projectsElem = document.querySelector(".project-data");
     const navElem = document.querySelector(".navigation");
     const arrowRight = document.querySelector(".arrow-right");
     const arrowLeft = document.querySelector(".arrow-left");
 
     if (!projectsElem || !navElem || !arrowRight || !arrowLeft) {
-        return; // Stoppt, wenn die HTML-Elemente nicht da sind
+        return;
     }
 
     const buildTemplate = (template, data) => {
@@ -142,7 +132,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const rotationAmt = 360 / projectDataSource.length;
     let focused = 0;
 
-    const radius = (450 * 1.2) / (2 * Math.tan(Math.PI / projectDataSource.length));
+    const radius = (400 * 1.2) / (2 * Math.tan(Math.PI / projectDataSource.length));
     const distToEdge = Math.round(Math.sqrt(radius ** 2 - 225 ** 2) + 20);
     projectsElem.style.setProperty("--distance", distToEdge + "px");
 
@@ -199,5 +189,5 @@ document.addEventListener("DOMContentLoaded", function() {
         update(true);
     });
     
-    update(false); // Startet das Karussell
+    update(false);
 });

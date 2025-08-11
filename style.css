@@ -640,37 +640,36 @@ section {
   font-size: 0.8rem;
   margin-top: 5px;
 }
-
-
-
-
-
-/* ======================= PROJECTS SECTION / DYNAMIC CAROUSEL (nach Vorbild) ======================= */
+/* ======================= Projekt section============= */
 #projects {
   padding: 100px 20px;
   background-color: #222222;
 }
 
-/* Du hast diese Klasse wahrscheinlich schon, falls nicht, füge sie hinzu */
 .projects-container {
-  margin: 0 auto;
+  margin-bottom: 0%;
+  text-align: center;
 }
 
-/* NEU: Stellt sicher, dass der Container die volle Breite nutzt */
 .wide-container {
     width: 100%;
-    max-width: 1200px; /* Behält eine vernünftige Maximalbreite bei */
+    max-width: 1200px;
 }
 
 #projects .section-title {
-  color: #ffffff;
+  color: #000000;
+  font-size: 2.8rem;
+  font-weight: 500;
+  margin-bottom: 0%;
+  position: relative;
+  display: inline-block;
 }
 
 .projects-section {
   min-height: 80vh;
-  margin-top: 40px;
+  margin-top: 0%;
   display: flex;
-  width: 100%; /* NEU: Erlaubt dem Container, die volle Breite einzunehmen */
+  width: 100%;
 }
 
 .project-data-wrapper {
@@ -703,7 +702,7 @@ section {
   transform: translateY(-50%);
   font-size: 30px;
   cursor: pointer;
-  color: #3498DB; /* Deine Akzentfarbe */
+  color: #3498DB;
   z-index: 10;
   padding: 10px;
 }
@@ -729,14 +728,14 @@ section {
 }
 
 .navigation .focused {
-  background: #3498DB; /* Deine Akzentfarbe */
+  background: #3498DB;
   transform: scale(1.4);
 }
 
 .project-card {
   padding: 1.5rem;
-  width: min(450px, calc(100vw - 70px));
-  max-width: 450px;
+  width: min(350px, calc(100vw - 70px));
+  max-width: 350px;
   box-sizing: border-box;
   background-color: #ffffff;
   border-radius: 1em;
@@ -761,7 +760,7 @@ section {
   margin: -1.5rem -1.5rem 1.5rem -1.5rem;
 }
 .card-img-top {
-    height: 220px;
+    height: 170px;
     object-fit: cover;
     width: 100%;
 }
@@ -789,7 +788,7 @@ section {
 .card-buttons {
   display: flex;
   gap: 10px;
-  margin-top: auto; /* Schiebt die Buttons nach unten */
+  margin-top: auto;
 }
 .card-buttons .btn {
   font-weight: 600;
@@ -813,7 +812,7 @@ section {
 }
 
 .content {
-  max-height: 100px; /* Höhe der Beschreibung */
+  max-height: 100px;
   overflow-y: auto;
   padding-right: 10px;
   font-size: 0.95rem;
