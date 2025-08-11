@@ -1,4 +1,4 @@
-/* ======================= GRUNDEINSTELLUNGEN==== */
+/* ======================grundsettings==== */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap");
 
 body {
@@ -7,8 +7,7 @@ body {
   padding: 0;
   background-color: #222222;
 }
-
-/* ======================= NAVIGATIONSLLEISTE======= */
+/* ======================navbar===== */
 .navbar {
   background-color: #222222;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
@@ -175,7 +174,6 @@ body {
     justify-content: center;
   }
 }
-
 /* ======================= ABSCHNITTE & HINTERGRÜNDE ======================= */
 section {
   min-height: 100vh;
@@ -195,8 +193,6 @@ section {
   background-color: #ffffff;
   color: #222222;
 }
-
-
 /* ======================= ABOUT ME SECTION===================== */
 #about {
   padding: 100px 40px;
@@ -268,14 +264,11 @@ section {
   .about-text h1 {
     font-size: 2.5rem;
   }
-  
-  /* GEÄNDERT: Auch mobile Schriftgrößen angepasst */
   .about-text h2, .about-text h3 {
       font-size: 1.5rem;
   }
 }
-/* ======================= SOCIAL MEDIA BUTTONS ================= */
-
+/* =========social buttons==== */
 /*Container für Buttons. */
 .social-card {
   display: flex;
@@ -285,8 +278,7 @@ section {
   margin-top: 25px;
   padding: 0;
 }
-
-/*gilt für alle Buttons */
+/*fAll */
 .Btn {
   width: 45px;
   height: 45px;
@@ -300,7 +292,6 @@ section {
   cursor: pointer;
   transition: all 0.3s;
 }
-
 /* Der Container, der das Icon direkt umschließt */
 .svgContainer {
   width: 100%;
@@ -314,8 +305,6 @@ section {
   transition: all 0.3s;
   z-index: 2;
 }
-
-/* farbige Element, das beim Hovern ersceint */
 .BG {
   position: absolute;
   width: 100%;
@@ -326,8 +315,6 @@ section {
   transition: all 0.3s;
   font-size: 0px;
 }
-
-/* Buttonhintergründe */
 .github .BG { background: #181818; }
 .whatsapp .BG { background: #075e54; }
 .linkdin .BG { background: #0077b5; }
@@ -353,7 +340,6 @@ section {
     /* Zentriert die Buttons unter dem Text auf kleinen Bildschirmen */
   }
 }
-
 
 .scrolldown {
 
@@ -387,7 +373,6 @@ section {
   box-sizing: border-box;
   box-shadow: 0px -5px 3px 1px #2a547066;
 }
-
 @keyframes scrolldown-anim {
   0% {
     opacity: 0;
@@ -445,15 +430,8 @@ section {
     opacity: 0.5;
   }
 }
-
 /* ======================= ABOUT ME SECTION Ende ===================== */
-
-
-
-
-
-
-/* ======================= FOCUS / PROFIL SECTION (Aktualisiert mit zentraler Überschrift) ======================= */
+/* ======================Über mich Section start================= */
 #focus-section {
   padding: 120px 40px;
   background-color: #ffffff;
@@ -466,32 +444,29 @@ section {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1.2fr;
-  gap: 9%; /* Zurückgesetzt auf einen Standardwert, kann angepasst werden */
+  gap: 9%;
   align-items: start;
+  margin-bottom: 12%;
 }
 
-/* NEUE REGEL: Überschrift erstreckt sich über beide Spalten */
 .focus-container .section-title {
-  grid-column: 1 / -1; /* Nimmt alle Spalten von der ersten bis zur letzten ein */
+  grid-column: 1 / -1;
   text-align: center;
-  margin-bottom: 60px; /* Größerer Abstand zum Inhalt darunter */
   font-size: 2.8rem;
 }
 
-/* Die Linie unter der Überschrift */
 .focus-container .section-title::after {
   content: '';
   position: absolute;
-  width: 80px; /* Breite der Linie kann hier angepasst werden */
+  width: 80px;
   height: 4px;
-  background-color: #3498DB;
   bottom: -15px;
   left: 50%;
   transform: translateX(-50%);
   border-radius: 2px;
 }
 
-/* Linke Spalte mit Bild und Zitat */
+/* Links*/
 .focus-left {
   position: relative;
 }
@@ -523,17 +498,11 @@ section {
   border-left: 4px solid white;
   padding-left: 20px;
 }
-
-/* Rechte Spalte mit dem Text (keine speziellen Regeln mehr nötig) */
-.focus-right {
-  /* Ist jetzt nur noch ein einfacher Container */
-}
-
 .focus-text h3 {
   font-size: 1.4rem;
   font-weight: 700;
   color: #3498DB;
-  margin-top: 0; /* Kein Abstand nach oben nötig, da es das erste Element ist */
+  margin-top: 0;
   margin-bottom: 10px;
 }
 
@@ -542,10 +511,8 @@ section {
   line-height: 1.7;
   color: #444444;
   margin: 0;
-  margin-bottom: 1em; /* Fügt Abstand zwischen den Absätzen hinzu */
+  margin-bottom: 1em;
 }
-
-/* Letzten Absatz ohne Abstand unten */
 .focus-text p:last-child {
     margin-bottom: 0;
 }
@@ -557,7 +524,7 @@ section {
     gap: 40px;
   }
   .focus-right {
-    margin-top: 60px; /* Angepasster Abstand für mobile Ansicht */
+    margin-top: 60px;
   }
 }
 
@@ -581,13 +548,6 @@ section {
   }
 }
 
-
-
-
-
-
-
-
-/* ======================= SKILLS SECTION ======================= */
+/* ========= SKILLS Section start============= */
 
 
