@@ -1,0 +1,357 @@
+/* ======================= GRUNDEINSTELLUNGEN==== */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #222222;
+}
+
+/* ======================= NAVIGATIONSLLEISTE======= */
+.navbar {
+  background-color: #222222;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+  padding: 0;
+  height: 85px;
+}
+
+.navbar .nav-brand {
+  position: relative;
+  top: -15px; /*vertikal*/
+  background-color: #3498DB;
+  color: white;
+  font-weight: 900;
+  font-size: 2em;
+  padding: 20px 10px 0px 10px;
+  text-decoration: none;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.1);
+  margin-right: auto; 
+}
+
+.navbar-collapse {
+  justify-content: flex-end;
+}
+
+.navbar-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.nav-card-item {
+  list-style: none;
+}
+
+.navbar li .nav-link {
+  color: white;
+  text-decoration: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 4px;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.navbar li .nav-link:hover {
+  color: #3498DB !important;
+  background-color: rgba(52, 152, 219, 0.1); 
+}
+
+.cv-download {
+  color: #ffffff;
+  border: none;
+  background-color: #3498DB; 
+  padding: 15px 20px;
+  border-radius: 4px;
+  margin-left: 20px;
+  font-size: 17px;
+  display: flex; 
+  align-items: center;
+}
+
+.cv-download .fa-cloud-arrow-down {
+  margin-right: 10px;
+}
+
+.scroll-progress-track {
+  position: fixed;
+  top: 85px;
+  width: 100%;
+  height: 5px;
+  background-color: transparent;
+  z-index: 1001;
+}
+
+#progress-bar {
+  height: 100%;
+  background-color: #3498DB;
+  width: 0%;
+}
+
+/* Hamburger Icon */
+.navbar-toggler {
+  border: none;
+  padding: 0;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+#nav-icon {
+  width: 25px;
+  height: 30px;
+  position: relative;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+#nav-icon span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 2px;
+  opacity: 1;
+  left: 0;
+  transition: 0.25s ease-in-out;
+}
+
+#nav-icon span:nth-child(1) { top: 0px; }
+#nav-icon span:nth-child(2) { top: 10px; background-color: #3498DB; }
+#nav-icon span:nth-child(3) { top: 20px; }
+
+/* Animation für Hamburger-Icon (offen) */
+#nav-icon.open span:nth-child(1) { top: 10px; transform: rotate(135deg); }
+#nav-icon.open span:nth-child(2) { opacity: 0; left: -60px; }
+#nav-icon.open span:nth-child(3) { top: 10px; transform: rotate(-135deg); }
+
+/* MobileView */
+@media (max-width: 991px) {
+  .navbar .container {
+    justify-content: space-between;
+    width: 100%;
+  }
+  .navbar .nav-brand {
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    margin-right: 0;
+    top: -1px;
+  }
+  .navbar-toggler {
+    position: absolute;
+    top: 25px;
+    right: 1rem;
+  }
+  .navbar-collapse {
+    background-color: #222222;
+    padding: 20px;
+    margin-top: 70px;
+    border-radius: 5px;
+    width: 100%;
+  }
+  .navbar-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+  .nav-card-item {
+    width: 100%;
+    text-align: center;
+  }
+  .cv-download {
+    width: 100%;
+    margin-top: 20px;
+    margin-left: 0;
+    justify-content: center;
+  }
+}
+
+/* ======================= ABSCHNITTE & HINTERGRÜNDE ======================= */
+section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 20px;
+  box-sizing: border-box;
+}
+
+.bg-dark {
+  background-color: #222222;
+  color: #ffffff;
+}
+
+.bg-light {
+  background-color: #ffffff;
+  color: #222222;
+}
+
+
+/* ======================= ABOUT ME SECTION (Aktualisiert) ======================= */
+#about {
+  padding: 100px 40px;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about-text, .about-image {
+  flex: 1;
+}
+
+.about-text h2 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #cccccc;
+  margin-bottom: 10px; 
+}
+
+.about-text h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.about-text h1 span {
+  color: #3498DB;
+}
+
+.about-text h3 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #cccccc;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+.about-text p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #b8b5b5;
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .about-image {
+    order: -1;
+  }
+
+  .about-text h1 {
+    font-size: 2.5rem;
+  }
+  
+  /* GEÄNDERT: Auch mobile Schriftgrößen angepasst */
+  .about-text h2, .about-text h3 {
+      font-size: 1.5rem;
+  }
+}
+
+
+
+
+
+/* ======================= SOCIAL MEDIA BUTTONS ================= */
+
+/*Container für Buttons. */
+.social-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: transparent;
+  margin-top: 25px;
+  padding: 0;
+}
+
+/*gilt für alle Buttons */
+.Btn {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+/* Der Container, der das Icon direkt umschließt */
+.svgContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  backdrop-filter: blur(0px);
+  border-radius: 10px;
+  transition: all 0.3s;
+  z-index: 2;
+}
+
+/* farbige Element, das beim Hovern ersceint */
+.BG {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  border-radius: 10px;
+  pointer-events: none;
+  transition: all 0.3s;
+  font-size: 0px;
+}
+
+/* Buttonhintergründe */
+.github .BG { background: #181818; }
+.whatsapp .BG { background: #075e54; }
+.linkdin .BG { background: #0077b5; }
+.discord .BG { background: #7289da; }
+
+.Btn:hover .BG {
+  transform: scale(1.5);
+  font-size: 20px;
+  color: white;
+}
+
+.Btn:hover .svgContainer {
+  /* GEÄNDERT: Die Umrandung beim Hovern wird nun explizit heller */
+  border: 1px solid rgba(170, 170, 170, 0.6);
+  background-color: rgba(209, 209, 209, 0.466);
+  backdrop-filter: blur(4px);
+}
+
+/* Anpassung für mobile Ansicht: Zentriert die Buttons */
+@media (max-width: 768px) {
+  .social-card {
+    justify-content: center;
+    /* Zentriert die Buttons unter dem Text auf kleinen Bildschirmen */
+  }
+}
