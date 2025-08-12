@@ -7,14 +7,14 @@ body {
   padding: 0;
   background-color: #222222;
 }
-/* ======================navbar===== */
+
+
 .navbar {
   background-color: #222222;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
   padding: 0;
   height: 85px;
 }
-
 .navbar .nav-brand {
   position: relative;
   top: -15px; /*vertikal*/
@@ -29,11 +29,9 @@ body {
   box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.1);
   margin-right: auto; 
 }
-
 .navbar-collapse {
   justify-content: flex-end;
 }
-
 .navbar-links {
   list-style: none;
   margin: 0;
@@ -42,11 +40,9 @@ body {
   align-items: center;
   gap: 5px;
 }
-
 .nav-card-item {
   list-style: none;
 }
-
 .navbar li .nav-link {
   color: white;
   text-decoration: none;
@@ -55,12 +51,10 @@ body {
   border-radius: 4px;
   transition: color 0.3s, background-color 0.3s;
 }
-
 .navbar li .nav-link:hover {
   color: #3498DB !important;
   background-color: rgba(52, 152, 219, 0.1); 
 }
-
 .cv-download {
   color: #ffffff;
   border: none;
@@ -72,11 +66,9 @@ body {
   display: flex; 
   align-items: center;
 }
-
 .cv-download .fa-cloud-arrow-down {
   margin-right: 10px;
 }
-
 .scroll-progress-track {
   position: fixed;
   top: 85px;
@@ -85,13 +77,11 @@ body {
   background-color: transparent;
   z-index: 1001;
 }
-
 #progress-bar {
   height: 100%;
   background-color: #3498DB;
   width: 0%;
 }
-
 /* Hamburger Icon */
 .navbar-toggler {
   border: none;
@@ -100,7 +90,6 @@ body {
 .navbar-toggler:focus {
   box-shadow: none;
 }
-
 #nav-icon {
   width: 25px;
   height: 30px;
@@ -108,7 +97,6 @@ body {
   transition: 0.5s ease-in-out;
   cursor: pointer;
 }
-
 #nav-icon span {
   display: block;
   position: absolute;
@@ -123,12 +111,11 @@ body {
 .navbar-collapse > a {
   text-decoration: none;
 }
-
 #nav-icon span:nth-child(1) { top: 0px; }
 #nav-icon span:nth-child(2) { top: 10px; background-color: #3498DB; }
 #nav-icon span:nth-child(3) { top: 20px; }
 
-/* Animation für Hamburger-Icon (offen) */
+/* AnimationHamburger-Icon (offen) */
 #nav-icon.open span:nth-child(1) { top: 10px; transform: rotate(135deg); }
 #nav-icon.open span:nth-child(2) { opacity: 0; left: -60px; }
 #nav-icon.open span:nth-child(3) { top: 10px; transform: rotate(-135deg); }
@@ -174,7 +161,7 @@ body {
     justify-content: center;
   }
 }
-/* ======================= ABSCHNITTE & HINTERGRÜNDE ======================= */
+/* ======================= ABSCHNITTE ALLGEMEIN SETTINGS real ======================= */
 section {
   min-height: 100vh;
   display: flex;
@@ -183,21 +170,20 @@ section {
   padding: 100px 20px;
   box-sizing: border-box;
 }
-
 .bg-dark {
   background-color: #222222;
   color: #ffffff;
 }
-
 .bg-light {
   background-color: #ffffff;
   color: #222222;
 }
-/* ======================= ABOUT ME SECTION===================== */
+
+
+
 #about {
   padding: 100px 40px;
 }
-
 .about-container {
   display: flex;
   align-items: center;
@@ -206,29 +192,24 @@ section {
   max-width: 1100px;
   margin: 0 auto;
 }
-
 .about-text, .about-image {
   flex: 1;
 }
-
 .about-text h2 {
   font-size: 1.8rem;
   font-weight: 400;
   color: #cccccc;
   margin-bottom: 10px; 
 }
-
 .about-text h1 {
   font-size: 3.5rem;
   font-weight: 700;
   margin: 0;
   line-height: 1.1;
 }
-
 .about-text h1 span {
   color: #3498DB;
 }
-
 .about-text h3 {
   font-size: 1.8rem;
   font-weight: 400;
@@ -236,13 +217,11 @@ section {
   margin-top: 10px;
   margin-bottom: 25px;
 }
-
 .about-text p {
   font-size: 1.2rem;
   line-height: 1.7;
   color: #b8b5b5;
 }
-
 .about-image img {
   max-width: 100%;
   height: auto;
@@ -256,11 +235,9 @@ section {
     text-align: center;
     gap: 40px;
   }
-
   .about-image {
     order: -1;
   }
-
   .about-text h1 {
     font-size: 2.5rem;
   }
@@ -269,7 +246,6 @@ section {
   }
 }
 /* =========social buttons==== */
-/*Container für Buttons. */
 .social-card {
   display: flex;
   align-items: center;
@@ -278,7 +254,6 @@ section {
   margin-top: 25px;
   padding: 0;
 }
-/*fAll */
 .Btn {
   width: 45px;
   height: 45px;
@@ -292,7 +267,6 @@ section {
   cursor: pointer;
   transition: all 0.3s;
 }
-/* Der Container, der das Icon direkt umschließt */
 .svgContainer {
   width: 100%;
   height: 100%;
@@ -325,22 +299,18 @@ section {
   font-size: 20px;
   color: white;
 }
-
 .Btn:hover .svgContainer {
 
   border: 1px solid rgba(170, 170, 170, 0.6);
   background-color: rgba(209, 209, 209, 0.466);
   backdrop-filter: blur(4px);
 }
-
 /* Anpassung für mobile Ansicht: Zentriert die Buttons */
 @media (max-width: 768px) {
   .social-card {
     justify-content: center;
-    /* Zentriert die Buttons unter dem Text auf kleinen Bildschirmen */
   }
 }
-
 .scrolldown {
 
   position: absolute; 
@@ -358,7 +328,6 @@ section {
   border-radius: 50px;
   box-sizing: border-box;
 }
-
 .scrolldown::before {
   content: "";
   position: absolute;
@@ -392,7 +361,6 @@ section {
     opacity: 0;
   }
 }
-
 .chevrons {
   padding: 6px 0 0 0;
   margin-left: -3px;
@@ -402,7 +370,6 @@ section {
   flex-direction: column;
   align-items: center;
 }
-
 .chevrondown {
   margin-top: -6px;
   position: relative;
@@ -413,15 +380,12 @@ section {
   height: 10px;
   transform: rotate(45deg);
 }
-
 .chevrondown:nth-child(odd) {
   animation: pulse54012 500ms ease infinite alternate;
 }
-
 .chevrondown:nth-child(even) {
   animation: pulse54012 500ms ease infinite alternate 250ms;
 }
-
 @keyframes pulse54012 {
   from {
     opacity: 0;
@@ -430,31 +394,30 @@ section {
     opacity: 0.5;
   }
 }
-/* ======================= ABOUT ME SECTION Ende ===================== */
+
+
+
 #focus-section {
   padding: 120px 40px;
   background-color: #ffffff;
   color: #222222;
   overflow: hidden; 
 }
-
 .focus-container {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1.2fr;
-  gap: 9%;
+  gap: 10%;
   align-items: start;
   margin-bottom: 12%;
 }
-
 .focus-container .section-title {
   grid-column: 1 / -1;
   text-align: center;
   font-size: 2.8rem;
   font-weight: 500;
 }
-
 .focus-container .section-title::after {
   content: '';
   position: absolute;
@@ -465,19 +428,15 @@ section {
   transform: translateX(-50%);
   border-radius: 2px;
 }
-
-/* Links*/
 .focus-left {
   position: relative;
 }
-
 .focus-left img {
   width: 100%;
   height: auto;
   border-radius: 15px;
   display: block;
 }
-
 .focus-quote {
   position: absolute;
   bottom: -15%;
@@ -489,14 +448,15 @@ section {
   max-width: 80%;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
-
 .focus-quote blockquote {
   margin: 0;
   font-size: 1.2rem;
   font-weight: 600;
   line-height: 1.4;
-  border-left: 4px solid white;
-  padding-left: 20px;
+  border-left: 2px solid white;
+  border-right: 2px solid white;
+  padding-left: 13px;
+  padding-right: 5px;
 }
 .focus-text h3 {
   font-size: 1.4rem;
@@ -505,18 +465,16 @@ section {
   margin-top: 0;
   margin-bottom: 10px;
 }
-
 .focus-text p {
   font-size: 1.1rem;
   line-height: 1.7;
-  color: #444444;
+  color: #313131;
   margin: 0;
   margin-bottom: 1em;
 }
 .focus-text p:last-child {
     margin-bottom: 0;
 }
-
 /* Responsive Anpassungen */
 @media (max-width: 992px) {
   .focus-container {
@@ -527,7 +485,6 @@ section {
     margin-top: 60px;
   }
 }
-
 @media (max-width: 768px) {
   #focus-section {
     padding: 80px 20px;
@@ -547,19 +504,19 @@ section {
     margin-top: 40px;
   }
 }
-/* ========= SKILLS Section start============= */
+
+
+
 #skills {
   padding: 100px 40px;
   background-color: #222222;
 }
-
 .skills-container {
   width: 80%;
   max-width: 1400px; 
   margin: 0 auto;
   text-align: center;
 }
-
 #skills .section-title {
   color: #ffffff;
   font-size: 2.8rem;
@@ -568,7 +525,6 @@ section {
   position: relative;
   display: inline-block;
 }
-
 #skills .section-title::after {
   content: '';
   position: absolute;
@@ -579,7 +535,6 @@ section {
   transform: translateX(-50%);
   border-radius: 2px;
 }
-
 .subsection-title {
   color: #dddddd;
   font-size: 1.8rem;
@@ -587,15 +542,12 @@ section {
   margin-top: 60px;
   margin-bottom: 40px;
 }
-
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 30px 20px;
   margin-bottom: 15%;
 }
-
-
 .skill-card {
   background-color: transparent;
   border: none;
@@ -607,11 +559,9 @@ section {
   height: auto;
   transition: transform 0.3s ease;
 }
-
 .skill-card:hover {
   transform: scale(1.1);
 }
-
 .skill-card i, 
 .skill-card img,
 .skill-card span[class^="flag-icon"] {
@@ -626,7 +576,6 @@ section {
   justify-content: center;
   border-radius: 4px;
 }
-
 .skill-card p {
   color: #cccccc;
   font-weight: 500;
@@ -634,28 +583,26 @@ section {
   margin: 0;
   line-height: 1.2;
 }
-
 .skill-card span {
   color: #999999;
   font-size: 0.8rem;
   margin-top: 5px;
 }
-/* ======================= Projekt section============= */
+
+
+
 #projects {
   padding: 100px 20px;
   background-color: #222222;
 }
-
 .projects-container {
   margin-bottom: 0%;
   text-align: center;
 }
-
 .wide-container {
     width: 100%;
     max-width: 1200px;
 }
-
 #projects .section-title {
   color: #000000;
   font-size: 2.8rem;
@@ -664,14 +611,12 @@ section {
   position: relative;
   display: inline-block;
 }
-
 .projects-section {
   min-height: 80vh;
   margin-top: 0%;
   display: flex;
   width: 100%;
 }
-
 .project-data-wrapper {
   perspective-origin: 50% 50%;
   perspective: 100em;
@@ -684,7 +629,6 @@ section {
   min-height: 500px;
   flex-grow: 1;
 }
-
 .project-data {
   position: absolute;
   left: 50%;
@@ -695,7 +639,6 @@ section {
   transform: translateZ(calc(var(--distance) * -1));
   transform-style: preserve-3d;
 }
-
 .arrow-left, .arrow-right {
   position: absolute;
   top: 50%;
@@ -706,10 +649,8 @@ section {
   z-index: 10;
   padding: 10px;
 }
-
 .arrow-left { left: 0px; }
 .arrow-right { right: 0px; }
-
 .navigation {
   position: absolute;
   bottom: 1rem;
@@ -717,7 +658,6 @@ section {
   gap: 10px;
   cursor: pointer;
 }
-
 .navigation .nav-dot {
   padding: 5px;
   background: #fff;
@@ -726,12 +666,10 @@ section {
   border-radius: 50%;
   transition: all 0.4s ease;
 }
-
 .navigation .focused {
   background: #3498DB;
   transform: scale(1.4);
 }
-
 .project-card {
   padding: 1.5rem;
   width: min(350px, calc(100vw - 70px));
@@ -748,13 +686,11 @@ section {
   color: #333;
   text-align: left;
 }
-
 .project-card.focused {
   filter: grayscale(0%) blur(0px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   pointer-events: auto;
 }
-
 .projects-header {
   overflow: hidden;
   border-radius: 0.5rem;
@@ -765,11 +701,9 @@ section {
     object-fit: cover;
     width: 100%;
 }
-
 .card-title {
     font-weight: 700;
 }
-
 .technologies {
   margin-top: 1em;
   margin-bottom: 1.5rem;
@@ -777,7 +711,6 @@ section {
   flex-wrap: wrap;
   gap: 8px;
 }
-
 .technologies .stack-badge {
   background-color: #e0e0e0;
   color: #333;
@@ -785,7 +718,6 @@ section {
   font-size: 0.8rem;
   border-radius: 5px;
 }
-
 .card-buttons {
   display: flex;
   gap: 10px;
@@ -811,7 +743,6 @@ section {
   background-color: #333;
   border-color: #333;
 }
-
 .content {
   max-height: 100px;
   overflow-y: auto;
@@ -819,7 +750,6 @@ section {
   font-size: 0.95rem;
   line-height: 1.6;
 }
-
 .content::-webkit-scrollbar {
   width: 5px;
   background: #e0e0e0;
@@ -828,12 +758,10 @@ section {
   background: #3498DB;
   border-radius: 5px;
 }
-
 .card-buttons .no-demo {
   position: relative;
   overflow: hidden;
 }
-
 .card-buttons .no-demo::after {
   content: '';
   position: absolute;
@@ -848,20 +776,16 @@ section {
 
 
 
-
-/* ======================= CONTACT SECTION (Heller Hintergrund, Final) ======================= */
 #contact {
   padding: 100px 40px;
   background-color: #ffffff;
   color: #333333;
 }
-
 .contact-container {
   max-width: 1100px;
   margin: 0 auto;
-  text-align: center; /* GEÄNDERT: Zentriert die Überschrift "Kontakt" */
+  text-align: center;
 }
-
 #contact .section-title {
   color: #000000;
   font-size: 2.8rem;
@@ -870,22 +794,19 @@ section {
   position: relative;
   display: inline-block;
 }
-
 .contact-wrapper {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 60px;
   margin-top: 60px;
-  text-align: left; /* Stellt sicher, dass der Inhalt des Wrappers linksbündig bleibt */
+  text-align: left;
 }
-
 .contact-form h3, .contact-info h3 {
   color: #222222;
   font-weight: 600;
   margin-bottom: 30px;
   text-align: left;
 }
-
 .form-group {
   margin-bottom: 20px;
 }
@@ -915,7 +836,6 @@ section {
   background-color: #3498DB;
   border-color: #3498DB;
 }
-
 .contact-info {
   text-align: center;
 }
@@ -923,7 +843,6 @@ section {
     justify-content: center;
     margin-bottom: 30px;
 }
-
 .contact-email {
   color: #555555;
   line-height: 1.6;
