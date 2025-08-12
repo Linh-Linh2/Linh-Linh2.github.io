@@ -875,3 +875,157 @@ section {
     grid-template-columns: 1fr;
   }
 }
+
+
+
+#interests {
+  padding: 100px 40px;
+  background-color: #222222;
+}
+.interests-container {
+  width: 70%;
+  max-width: 1300px; 
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 10%;
+}
+#interests .section-title {
+  color: #ffffff;
+  font-size: 2.8rem;
+  font-weight: 500;
+  margin-bottom: 5%;
+  position: relative;
+  display: inline-block;
+}
+.interests-subsection {
+  margin-top: 80px;
+}
+.interests-subsection .subsection-title {
+  color: #dddddd;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.interests-subsection .subsection-subtitle {
+  color: #999999;
+  font-size: 1rem;
+  margin-top: -15px;
+  margin-bottom: 40px;
+}
+.book-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+.book-card {
+  position: relative;
+  width: 260px;
+  height: 390px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.book-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 15px 30px rgba(52, 152, 219, 0.3);
+}
+.book-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.book-card:hover img {
+    transform: scale(1.1);
+}
+.book-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 25px;
+  box-sizing: border-box;
+  background: linear-gradient(180deg, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.95) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.book-card:hover .book-info {
+  opacity: 1;
+}
+.book-title h5 {
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0;
+}
+.book-title p {
+  color: #cccccc;
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin: 5px 0 0 0;
+}
+.book-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.book-tag {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  color: #ffffff;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.book-description {
+  color: #ffffff !important;
+  font-size: 1rem !important;
+  font-weight: 550 !important;
+  line-height: 1.5;
+  margin-top: 15px !important;
+}
+/* FotogalerieMasonry-Stil */
+.photo-gallery {
+  column-count: 3;
+  column-gap: 15px;
+}
+.photo-item {
+  margin-bottom: 15px;
+  display: inline-block;
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+.photo-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+/* Responsive Anpassungen */
+@media (max-width: 992px) {
+
+    .interests-container {
+        width: 90%;
+    }
+}
+@media (max-width: 768px) {
+  .photo-gallery {
+    column-count: 2;
+  }
+}
+@media (max-width: 480px) {
+  .photo-gallery {
+    column-count: 1;
+  }
+}
