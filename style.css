@@ -746,6 +746,7 @@ section {
   pointer-events: none;
   filter: grayscale(80%) blur(4px);
   color: #333;
+  text-align: left;
 }
 
 .project-card.focused {
@@ -826,4 +827,132 @@ section {
 .content::-webkit-scrollbar-thumb {
   background: #3498DB;
   border-radius: 5px;
+}
+
+.card-buttons .no-demo {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-buttons .no-demo::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -10%;
+  width: 120%;
+  height: 2px;
+  background-color: rgb(216, 77, 77);
+  transform: rotate(-22deg); 
+  transform-origin: center center;
+}
+
+
+
+
+/* ======================= CONTACT SECTION (Heller Hintergrund, Final) ======================= */
+#contact {
+  padding: 100px 40px;
+  background-color: #ffffff;
+  color: #333333;
+}
+
+.contact-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center; /* GEÄNDERT: Zentriert die Überschrift "Kontakt" */
+}
+
+#contact .section-title {
+  color: #000000;
+  font-size: 2.8rem;
+  font-weight: 500;
+  margin-bottom: 5%;
+  position: relative;
+  display: inline-block;
+}
+
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 60px;
+  margin-top: 60px;
+  text-align: left; /* Stellt sicher, dass der Inhalt des Wrappers linksbündig bleibt */
+}
+
+.contact-form h3, .contact-info h3 {
+  color: #222222;
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group label {
+  display: block;
+  color: #555555;
+  margin-bottom: 8px;
+}
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 12px;
+  background-color: #f0f0f0;
+  border: 1px solid #3498DB;
+  border-radius: 5px;
+  color: #333333;
+  font-size: 1rem;
+}
+.form-group input:focus, .form-group textarea:focus {
+  outline: none;
+  border-color: #3498DB;
+}
+.submit-btn {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background-color: #3498DB;
+  border-color: #3498DB;
+}
+
+.contact-info {
+  text-align: center;
+}
+.contact-info .social-card {
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.contact-email {
+  color: #555555;
+  line-height: 1.6;
+}
+.contact-email a {
+  color: #3498DB;
+  text-decoration: none;
+}
+.to-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #3498DB;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+.to-top-btn:hover {
+    transform: scale(1.1);
+}
+@media (max-width: 768px) {
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+  }
 }

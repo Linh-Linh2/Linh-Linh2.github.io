@@ -22,12 +22,10 @@ $(document).ready(function () {
 
       $("html, body").animate(
         {
-          scrollTop: $(hash).offset().top - 85, // 85px ist die Höhe der Navbar
+          scrollTop: $(hash).offset().top - 85,
         },
-        800 // Dauer der Animation
+        800
       );
-      
-      // Schließt das mobile Menü nach dem Klick (falls offen)
       if ($('.navbar-collapse').hasClass('show')) {
         $('.navbar-toggler').click();
       }
@@ -47,12 +45,12 @@ document.addEventListener("DOMContentLoaded", function() {
         description: "Ein anpassbares Desktop-Tool, das die wöchentlichen Skin-Sales des bekannten Online-Spiels League of Legends überwacht und per Desktop-Benachrichtigung informiert, sobald ein Skin von der Wunschliste im Angebot ist.",
         techStack: ["Python", "Tkinter"],
         demoURL: "#",
-        srcURL: "#",
+        srcURL: "https://github.com/Linh-Linh2/LoLSaleAlarm",
       },
       {
         title: "Schulressourcenverwalter",
         thumbnail: "img/board-5599231_1280.png",
-        description: "Im einjährigen Schulressourcenverwalter-Projekt übernahm ich die Umsetzung von Funktionen zur Kurseinschreibung und Ressourcenverwaltung in enger Abstimmung mit realen  Anforderungen und echtem Kundenkontakt.",
+        description: "Im Schulressourcenverwalter-Projekt übernahm ich die Umsetzung von Funktionen zur Kurseinschreibung und Ressourcenverwaltung in enger Abstimmung mit realen  Anforderungen und echtem Kundenkontakt. Das Projekt dauerte 1 Jahr an.",
         techStack: ["TypeScript", "HTML", "CSS","Vue.js","PHP","MySQL","Laravel"],
         demoURL: "#",
         srcURL: "#",
@@ -63,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function() {
         description: "Dieses Projekt entstand 2024 im Rahmen des Moduls 'Systemnahe Programmierung' als 2er-Gruppenarbeit und wurde mit der Note 1.0 bewertet. Ziel war es, eine Binäruhr zu entwickeln, die sowohl die Hardware- als auch die Softwareentwicklung umfasst. Die Uhr zeigt die aktuelle Zeit im Binärformat mittels LEDs an und wird von einem Mikrocontroller gesteuert. Neben dem Entwurf und Fräsen der Leiterplatte lag ein besonderer Fokus auf der effizienten und robusten Programmierung, einschließlich Tasterentprellung und PWM-Steuerung der Anzeige. Das Ergebnis ist eine funktionale, energiesparende und eigenständige Binäruhr, die sich durch ihr kompaktes Design und ihre Zuverlässigkeit auszeichnet.",
         techStack: ["C++", "KiCad"],
         demoURL: "#",
-        srcURL: "#",
+        srcURL: "https://github.com/Linh-Linh2/binaer-uhr",
       },
       {
         title: "Mensch Ärgere Dich Nicht",
@@ -71,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function() {
         description: "Diese Projekt simuliert das bekannte Brettspiel 'Mensch Ärgere Dich Nicht' in Java und enstand in 2022 als Abschlussprojekt des Moduls 'Anwendungsorientierte Programmierung' im Rahmen einer Gruppenarbeit. Das Projekt erhielt eine Bewertung von 1,7. Es können bis zu vier menschliche Spieler teilnehmen. Sind weniger als vier Spieler beteiligt, übernimmt der Computer (Bot) die restlichen Spielerplätze. Die Bots agieren mit einer einfachen, aber sinnvollen Strategie. Das Spiel bietet eine grafische Benutzeroberfläche (GUI) und einen Testmodus, mit dem alle Spielfeatures gezielt überprüft werden können.",
         techStack: ["Java", "AWT", "Swing"],
         demoURL: "#",
-        srcURL: "#",
+        srcURL: "https://github.com/Linh-Linh2/mensch-aegere-dich-nicht",
       },
       {
         title: "Fullduplex 8-Bit Nachrichtenübertragung",
@@ -79,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function() {
         description: "Ziel dieses Projekts war die Implementierung einer voll-duplexfähigen 8-Bit-Nachrichtenübertragung über Kabel zwischen zwei Systemen. Die Kommunikation erfolgt paketbasiert, wobei jedes Zeichen in zwei 4-Bit-Pakete aufgeteilt und mit Start-/End-Bits sowie Escape-Bits übertragen wird. Zur Fehlererkennung wird eine CRC8-Prüfsumme verwendet. Das Projekt enstand im Rahmen des Moduls 'Hardwarepraktikum' als Gruppenarbeit zweier Bachelorstudenten.",
         techStack: ["C++"],
         demoURL: "#",
-        srcURL: "#",
+        srcURL: "https://github.com/Linh-Linh2/8bit-fullduplex-nachrichtenaustausch",
       },
       {
         title: "Das letzte Projekt",
@@ -121,7 +119,7 @@ document.addEventListener("DOMContentLoaded", function() {
            <div class='content'>{description}</div>
            <div class='technologies'>${techStackData}</div>
            <div class="card-buttons">
-              <a href="{demoURL}" target="_blank" class="btn btn-primary"><i class="fa-solid fa-display"></i> Live Demo</a>
+              <a href="{demoURL}" target="_blank" class="btn btn-primary no-demo"><i class="fa-solid fa-display"></i> Live Demo</a>
               <a href="{srcURL}" target="_blank" class="btn btn-secondary"><i class="fa-regular fa-file-code"></i> Source Code</a>
           </div>`,
           data
@@ -190,4 +188,22 @@ document.addEventListener("DOMContentLoaded", function() {
     });
     
     update(false);
+});
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const toTopBtn = document.getElementById("to-top-btn");
+
+    if(toTopBtn) {
+        toTopBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
 });
