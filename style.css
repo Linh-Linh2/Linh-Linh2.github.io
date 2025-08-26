@@ -7,8 +7,6 @@ body {
   padding: 0;
   background-color: #222222;
 }
-
-
 .navbar {
   background-color: #222222;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
@@ -82,7 +80,6 @@ body {
   background-color: #3498DB;
   width: 0%;
 }
-/* Hamburger Icon */
 .navbar-toggler {
   border: none;
   padding: 0;
@@ -120,7 +117,6 @@ body {
 #nav-icon.open span:nth-child(2) { opacity: 0; left: -60px; }
 #nav-icon.open span:nth-child(3) { top: 10px; transform: rotate(-135deg); }
 
-/* MobileView */
 @media (max-width: 991px) {
   .navbar .container {
     justify-content: space-between;
@@ -195,7 +191,6 @@ section {
 .about-text {
   flex: 1.6;
 }
-
 .about-image {
   flex: 1;
 }
@@ -233,20 +228,15 @@ section {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .about-container {
-    flex-direction: column;
-    text-align: center;
     gap: 40px;
   }
-  .about-image {
-    order: -1;
-  }
   .about-text h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
-  .about-text h2, .about-text h3 {
-      font-size: 1.5rem;
+  .about-text h2 {
+    font-size: 1.8rem;
   }
 }
 /* =========social buttons==== */
@@ -309,10 +299,36 @@ section {
   background-color: rgba(209, 209, 209, 0.466);
   backdrop-filter: blur(4px);
 }
-/* Anpassung für mobile Ansicht: Zentriert die Buttons */
 @media (max-width: 768px) {
+  #about {
+    padding: 80px 20px;
+    align-items: flex-start;
+    padding-top: 120px;
+  }
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+  .about-image {
+    order: -1;
+    width: 70%;
+    max-width: 300px;
+  }
+  .about-text h1 {
+    font-size: 2.5rem;
+  }
+  .about-text h2, .about-text h3 {
+      font-size: 1.5rem;
+  }
+  .about-text p {
+      font-size: 1rem;
+  }
   .social-card {
     justify-content: center;
+  }
+  .scrolldown {
+      display: none;
   }
 }
 .scrolldown {
@@ -403,34 +419,24 @@ section {
 
 #focus-section {
   padding: 120px 40px;
-  background-color: #ffffff;
-  color: #222222;
+  background-color: #f8f9fa; 
+  color: #333;
   overflow: hidden; 
 }
 .focus-container {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 10%;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 80px;
   align-items: start;
-  margin-bottom: 12%;
+  margin-bottom: 10%;
 }
 .focus-container .section-title {
   grid-column: 1 / -1;
   text-align: center;
   font-size: 2.8rem;
   font-weight: 500;
-}
-.focus-container .section-title::after {
-  content: '';
-  position: absolute;
-  width: 80px;
-  height: 4px;
-  bottom: -15px;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 2px;
 }
 .focus-left {
   position: relative;
@@ -440,53 +446,142 @@ section {
   height: auto;
   border-radius: 15px;
   display: block;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
 }
 .focus-quote {
   position: absolute;
-  bottom: -15%;
-  right: -40px;
-  background-color: #3498DB;
-  color: white;
-  padding: 25px;
+  bottom: -130px;
+  left: -40px;
+  background-color: #ffffff;
+  color: #555;
+  padding: 20px 25px 20px 60px;
   border-radius: 10px;
-  max-width: 80%;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  max-width: 90%;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  border: 3px solid #3498DB;
+}
+.focus-quote i.fa-quote-left {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 1.5rem;
+  color: #3498DB;
+  opacity: 0.8;
 }
 .focus-quote blockquote {
   margin: 0;
-  font-size: 1.2rem;
-  font-weight: 600;
-  line-height: 1.4;
-  border-left: 2px solid white;
-  border-right: 2px solid white;
-  padding-left: 13px;
-  padding-right: 5px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.6;
+  border: none;
+  padding: 0;
+}
+.focus-quote blockquote i {
+    font-weight: 600;
 }
 .focus-text h3 {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 700;
-  color: #3498DB;
+  color: #222;
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+.focus-text h3 i {
+  color: #3498DB;
+  font-size: 1.2rem;
+  margin-right: 15px;
+  width: 25px;
 }
 .focus-text p {
   font-size: 1.1rem;
-  line-height: 1.7;
-  color: #313131;
+  line-height: 1.8;
+  color: #555;
   margin: 0;
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
 }
 .focus-text p:last-child {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
-/* Responsive Anpassungen */
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
+  
+  #focus-section {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
   .focus-container {
-    grid-template-columns: 1fr;
     gap: 40px;
   }
+  .focus-container .section-title {
+    font-size: 2.5rem;
+  }
+  .focus-quote {
+    padding: 15px 20px 15px 45px;
+    bottom: -60px;
+    left: -20px;
+  }
+  .focus-quote blockquote {
+    font-size: 1rem;
+  }
+  .focus-quote i.fa-quote-left {
+    font-size: 1.2rem;
+    left: 15px;
+    top: 15px;
+  }
+  .focus-text h3 {
+    font-size: 1.4rem;
+  }
+  .focus-text p {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 1100px) {
+  .focus-container {
+    gap: 50px;
+  }
+  .focus-text h3 {
+    font-size: 1.3rem;
+  }
+  .focus-text p {
+    font-size: 0.9rem;
+  }
+  .focus-quote blockquote {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 992px) {
+  #focus-section {
+    padding: 100px 30px;
+  }
+  .focus-container {
+    grid-template-columns: 1fr;
+    gap: 0;
+    align-items: center; 
+  }
+  .focus-container .section-title {
+      margin-bottom: 80px;
+  }
+  .focus-left {
+    width: 70%; 
+    max-width: 450px;
+    margin: 0 auto;
+  }
+  .focus-text h3 {
+      font-size: 1.4rem;
+  }
+  .focus-text p {
+      font-size: 1rem;
+  }
   .focus-right {
-    margin-top: 60px;
+    margin-top: 80px;
+  }
+  .focus-quote {
+    position: relative; 
+    left: auto;
+    top: -25px;
+    right: auto;
+    max-width: 100%;
   }
 }
 @media (max-width: 768px) {
@@ -495,20 +590,33 @@ section {
   }
   .focus-container .section-title {
     font-size: 2.2rem;
-    margin-bottom: 40px;
+    margin-bottom: 50px; 
+  }
+  .focus-left {
+    width: 100%;
+    max-width: 350px;
   }
   .focus-quote {
-    position: relative;
-    bottom: 0;
-    right: 0;
+    position: relative; 
+    left: auto;
+    bottom: auto;
+    right: auto;
     margin-top: -40px;
     max-width: 100%;
+    box-sizing: border-box;
+    padding: 15px 20px 15px 50px;
+  }
+  .focus-quote i.fa-quote-left {
+      top: 15px;
+      left: 15px;
+  }
+  .focus-quote blockquote {
+      font-size: 1rem;
   }
   .focus-right {
-    margin-top: 40px;
+    margin-top: 50px;
   }
 }
-
 
 
 #skills {
@@ -734,10 +842,6 @@ section {
 .card-buttons .btn i {
   margin-right: 8px;
 }
-.card-buttons .btn-primary {
-  background-color: #3498DB;
-  border-color: #3498DB;
-}
 .card-buttons .btn-secondary {
   background-color: #555;
   border-color: #555;
@@ -762,22 +866,29 @@ section {
   background: #3498DB;
   border-radius: 5px;
 }
-.card-buttons .no-demo {
+.card-buttons .btn.disabled {
+  pointer-events: none;
+  cursor: not-allowed;
   position: relative;
   overflow: hidden;
 }
-.card-buttons .no-demo::after {
+.card-buttons .btn.disabled.btn-primary {
+  background-color: #3498DB;
+  border-color: #3498DB;
+  color: #ffffff;
+  opacity: 1;
+}
+.card-buttons .btn.disabled.btn-primary::after {
   content: '';
   position: absolute;
   top: 50%;
   left: -10%;
   width: 120%;
   height: 2px;
-  background-color: rgb(216, 77, 77);
-  transform: rotate(-22deg); 
+  background-color: #dc3545;
+  transform: rotate(-25deg);
   transform-origin: center center;
 }
-
 
 
 #contact {
@@ -919,7 +1030,7 @@ section {
 .book-gallery {
   display: flex;
   justify-content: center;
-  gap: 50px;
+  gap: 40px;
   flex-wrap: wrap;
 }
 .book-card {
@@ -944,6 +1055,25 @@ section {
 }
 .book-card:hover img {
     transform: scale(1.1);
+}
+.hover-indicator {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: #ffffff;
+  background-color: #3498DB;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  z-index: 3;
+  transition: opacity 0.3s ease;
+}
+.book-card:hover .hover-indicator {
+  opacity: 0;
 }
 .book-info {
   position: absolute;
@@ -1016,12 +1146,11 @@ section {
   height: auto;
   display: block;
 }
-/* Responsive Anpassungen */
 @media (max-width: 992px) {
-
-    .interests-container {
-        width: 90%;
-    }
+  .interests-container {
+    width: 90%;
+  }
+    
 }
 @media (max-width: 768px) {
   .photo-gallery {

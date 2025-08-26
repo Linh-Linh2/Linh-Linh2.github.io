@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function() {
       {
         title: "Schulressourcenverwalter",
         thumbnail: "img/board-5599231_1280.png",
-        description: "Im Schulressourcenverwalter-Projekt übernahm ich die Umsetzung von Funktionen zur Kurseinschreibung und Ressourcenverwaltung in enger Abstimmung mit realen  Anforderungen und echtem Kundenkontakt. Das Projekt dauerte 1 Jahr an.",
+        description: "Im Schulressourcenverwalter-Projekt übernahm ich die Umsetzung von Funktionen zur Kurseinschreibung und Ressourcenverwaltung in enger Abstimmung mit realen Anforderungen und einem echten Kunden. Das Projekt dauerte etwa 1 Jahr an.",
         techStack: ["TypeScript", "HTML", "CSS","Vue.js","PHP","MySQL","Laravel"],
         demoURL: "#",
         srcURL: "#",
@@ -80,12 +80,12 @@ document.addEventListener("DOMContentLoaded", function() {
         srcURL: "https://github.com/Linh-Linh2/8bit-fullduplex-nachrichtenaustausch",
       },
       {
-        title: "Das letzte Projekt",
+        title: "In Bearbeitung",
         thumbnail: "https://placehold.co/600x300/888/aaa?text=nochleer",
         description: "Textextext text text",
         techStack: ["Python", "Docker"],
         demoURL: "#",
-        srcURL: "#",
+        srcURL: "#"
       }
     ];
 
@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", function() {
            <div class='content'>{description}</div>
            <div class='technologies'>${techStackData}</div>
            <div class="card-buttons">
-              <a href="{demoURL}" target="_blank" class="btn btn-primary no-demo"><i class="fa-solid fa-display"></i> Live Demo</a>
+              <a ${data.demoURL !== "#" ? `href="{demoURL}"` : ''} target="_blank" class="btn btn-primary ${data.demoURL === "#" ? 'disabled' : ''}"><i class="fa-solid fa-display"></i> Live Demo</a>
               <a href="{srcURL}" target="_blank" class="btn btn-secondary"><i class="fa-regular fa-file-code"></i> Source Code</a>
           </div>`,
           data
@@ -189,10 +189,6 @@ document.addEventListener("DOMContentLoaded", function() {
     
     update(false);
 });
-
-
-
-
 
 document.addEventListener("DOMContentLoaded", function() {
     const toTopBtn = document.getElementById("to-top-btn");
